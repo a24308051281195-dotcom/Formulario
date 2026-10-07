@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The NY Times, Formulario</title>
+<style>
+	:root {
+		--background-image: "https://thumbs.dreamstime.com/b/paisajes-de-yosemite-46208063.jpg";
+	}
+	
+
+	span{
+		font-family: 'Times New Roman', serif;
+
+	}
+
+	.menuxd{
+	    background-color: rgba(36, 34, 34, 0.158);
+	    backdrop-filter: blur(5px);
+	    position: relative;
+	    border-radius: 8px;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: 1000;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding: 0 20px;
+
+	}
+	.logo{
+		font-size: 35px;
+		font-weight: bold;
+		color: black;
+		text-decoration: none;
+		line-height: 80px;
+	}
+	.p{
+		text-align: left;
+		font-size: 20px;
+	}
+
+	.buttnon{
+		background-color: rgba(51, 51, 51, 0.03);
+		backdrop-filter: blur(5px);
+  		border-radius: 8px;
+  		border-width: 0;
+  		color: #333333;
+  		cursor: pointer;
+  		display: inline-block;
+		font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		list-style: none;
+		margin: 0;
+		padding: 10px 12px;
+		text-align: center;
+		transition: all 200ms;
+		vertical-align: baseline;
+		white-space: nowrap;
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+		}
+	.trapecio{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	}
+	.dospuntosuve{
+		display: flex;
+		gap: 20px;
+		align-items: left;
+		margin-left: auto;
+	}
+
+</style>
+</head>
+<body class="body">
+	<div class="noticiasnuevas">
+		<header class="menuxd">
+			<class="h1"><span class = "logo">NY Times</span></h1>
+			<nav class="dospuntosuve">
+			<div class="trapecio">
+				<button type="button" class="buttnon">Iniciar sesion</button>
+			</div>
+			<p></p>
+			<div class="trapecio">
+				<button type="button" class = "buttnon">Crear cuenta</button>
+			</div>
+		</nav>
+			<div class="qwerty">
+				
+				<h1 
+			<div class="trapecio">
+				<p class="p"><span id="fecha"></span><p>
+			</div>
+			</div>
+			</nav>
+		</header>
+	
+	<script>
+		//Este script se utiliza para conocer la fecha actual
+		const hoy = new Date();
+		const fechaFormateada = hoy.toLocaleDateString();
+		document.getElementById('fecha').textContent = fechaFormateada;
+	</script>
+
+</body>
+</html>
+
