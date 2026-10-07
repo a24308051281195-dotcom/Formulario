@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The NY Times - Acceso</title>
+<style>
+	:root {
+		--background-image: url("https://thumbs.dreamstime.com/b/paisajes-de-yosemite-46208063.jpg");
+	}
+
+	body {
+		font-family: 'Times New Roman', serif;
+		background-color: #f9f9f9;
+		margin: 0;
+		padding: 0;
+	}
+
+	span {
+		font-family: 'Times New Roman', serif;
+	}
+
+	.menuxd {
+		background-color: rgba(36, 34, 34, 0.158);
+		backdrop-filter: blur(5px);
+		position: relative;
+		border-radius: 8px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-sizing: border-box;
+		z-index: 1000;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 20px;
+	}
+
+	.logo {
+		font-size: 35px;
+		font-weight: bold;
+		color: black;
+		text-decoration: none;
+		line-height: 80px;
+	}
+
+	.p {
+		text-align: left;
+		font-size: 16px;
+		margin: 0;
+	}
+
+	.buttnon {
+		background-color: rgba(51, 51, 51, 0.03);
+		backdrop-filter: blur(5px);
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		color: #333333;
+		cursor: pointer;
+		display: inline-block;
+		font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		margin: 0;
+		padding: 10px 12px;
+		text-align: center;
+		transition: all 200ms;
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+		text-decoration: none;
+	}
+
+	.buttnon:hover {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.trapecio {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.dospuntosuve {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		margin-left: auto;
+	}
+
+	.forms-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 40px;
+		padding: 40px 20px;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.card-form {
+		background: #ffffff;
+		border: 1px solid #e2e2e2;
+		border-radius: 12px;
+		padding: 30px;
+		width: 100%;
+		max-width: 380px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		box-sizing: border-box;
+	}
+
+	.card-form h2 {
+		font-family: 'Times New Roman', serif;
+		font-size: 26px;
+		margin-top: 0;
+		margin-bottom: 20px;
+		border-bottom: 2px solid #000;
+		padding-bottom: 8px;
+		text-align: center;
+	}
+
+	.form-group {
+		margin-bottom: 18px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-group label {
+		font-family: sans-serif;
+		font-size: 13px;
+		font-weight: 600;
+		margin-bottom: 6px;
+		color: #333;
+	}
+
+	.form-group input {
+		padding: 10px 12px;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		font-size: 14px;
+		outline: none;
+		transition: border-color 0.2s;
+	}
+
+	.form-group input:focus {
+		border-color: #000;
+	}
+
+	.btn-submit {
+		width: 100%;
+		background-color: #121212;
+		color: #ffffff;
+		border: none;
+		padding: 12px;
+		border-radius: 6px;
+		font-size: 15px;
+		font-weight: bold;
+		cursor: pointer;
+		margin-top: 10px;
+		transition: background-color 0.2s;
+	}
+
+	.btn-submit:hover {
+		background-color: #333333;
+	}
+</style>
+</head>
+<body class="body">
+	<div class="noticiasnuevas">
+		<header class="menuxd">
+			<h1><a href="index.html" class="logo">NY Times</a></h1>
+			
+			<nav class="dospuntosuve">
+				<div class="trapecio">
+					<a href="index.html" class="buttnon">Volver a Noticias</a>
+				</div>
+				<div class="trapecio">
+					<p class="p"><span id="fecha"></span></p>
+				</div>
+			</nav>
+		</header>
+	</div>
+
+	<main class="forms-container">
+		
+		<section class="card-form">
+			<h2>Iniciar Sesión</h2>
+			<form action="#" method="POST" onsubmit="return false;">
+				<div class="form-group">
+					<label for="login-email">Correo Electrónico</label>
+					<input type="email" id="login-email" name="login-email" placeholder="ejemplo@correo.com" required>
+				</div>
+				<div class="form-group">
+					<label for="login-password">Contraseña</label>
+					<input type="password" id="login-password" name="login-password" placeholder="••••••••" required>
+				</div>
+				<button type="submit" class="btn-submit">Entrar</button>
+			</form>
+		</section>
+
+		<section class="card-form">
+			<h2>Crear Cuenta</h2>
+			<form action="#" method="POST" onsubmit="return false;">
+				<div class="form-group">
+					<label for="reg-nombre">Nombre Completo</label>
+					<input type="text" id="reg-nombre" name="reg-nombre" placeholder="Juan Pérez" required>
+				</div>
+				<div class="form-group">
+					<label for="reg-email">Correo Electrónico</label>
+					<input type="email" id="reg-email" name="reg-email" placeholder="ejemplo@correo.com" required>
+				</div>
+				<div class="form-group">
+					<label for="reg-password">Contraseña</label>
+					<input type="password" id="reg-password" name="reg-password" placeholder="Crea tu contraseña" required>
+				</div>
+				<button type="submit" class="btn-submit">Registrarse</button>
+			</form>
+		</section>
+
+	</main>
+	
+	<script>
+		const hoy = new Date();
+		const fechaFormateada = hoy.toLocaleDateString('es-ES', { 
+			weekday: 'long', 
+			year: 'numeric', 
+			month: 'long', 
+			day: 'numeric' 
+		});
+		document.getElementById('fecha').textContent = fechaFormateada;
+	</script>
+</body>
+</html>
